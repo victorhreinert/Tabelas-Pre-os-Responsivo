@@ -59,6 +59,44 @@ body{
     display: block;
     font-size: 32px;
     font-weight: 700;
+}
+.preco-botao{
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #348efe;
+    display: inline-block;
+    padding: 15px 35px;
+    text-decoration: none;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+
+}
+
+.preco-botao:hover, .preco-botao:focus{
+    background-color: #e1f1ff;
+
+}
+
+.preco-botao.is-featured{
+    background-color: #48aaff;
+    color: white;
+}   
+.preco-botao.is-featured:focus, .preco-botao.is-featured:hover{
+    background-color: #269aff;
+    color: white;
+}
 
 
+@media(min-width: 900px){
+    .tabela-precos{
+        flex-direction: row;
+    }
+    .preco-plano{
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+        padding: 25px 50px;
+    }
+    .preco-plano:last-child{
+        border-right: none;
+    }
 }
