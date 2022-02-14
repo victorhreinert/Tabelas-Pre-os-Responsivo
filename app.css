@@ -30,5 +30,35 @@ body{
  .preco-imagem {
     margin-bottom: 25px;
     max-width: 100%;
-
  }
+
+ .preco-header {
+     color: #888;
+     font-weight: 600;
+     letter-spacing: 1px;
+ }
+ .preco-features{
+     margin: 50px 0 25px;
+     color: #016ff9;
+ }
+
+ .preco-features-item {
+     font-weight: 600;
+     letter-spacing: 1px;
+     font-size: 12px;
+     line-height: 1.5;
+     padding: 15px 0;
+     border-top: 1px solid #e1f1ff;
+ }
+ .preco-features-item:last-child{
+  border-bottom: 1px solid #e1f1ff;
+ }
+
+.preco-valor {
+    color: #016ff9;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+
+
+}
