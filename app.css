@@ -21,4 +21,14 @@ body{
     text-transform: uppercase;
 }
 
+.preco-plano {
+    border-bottom: 1px solid #e1f1ff;
+}
+.preco-plano:last-child{
+    border-bottom: none;
+}
+ .preco-imagem {
+    margin-bottom: 25px;
+    max-width: 100%;
 
+ }
