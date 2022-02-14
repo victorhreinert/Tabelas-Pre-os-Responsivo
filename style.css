@@ -46,3 +46,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+html{
+
+    box-sizing: border-box;/* indica que o tamanho agora levará 
+    em conta até a borda ou seja, o width será a soma do conteúdo
+    com a borda e o padding. */
+    
+    font-family: 'Open Sans', sans-serif;
+}

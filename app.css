@@ -1,0 +1,18 @@
+body{
+    background-color: #60a9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;/* 100vh significa que a altura inicial 
+    do corpo levará 100% da altura do viewport, enquanto o uso 
+    de altura mínima em vez de altura permitirá que o elemento 
+    do corpo cresça ainda mais se necessário. */
+
+}
+.tabela-precos{
+    background-color: white;
+
+
+}
+
+
