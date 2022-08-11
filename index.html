@@ -1,155 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background</title>
+  
+<div id="area" class="flex flex-end">
+  <figure class="">
+    <img class="" src="https://demo.creativethemes.com/elementor/web-agency/wp-content/uploads/2021/07/decorative-shape.svg" alt="figura">
+  </figure>
+</div>
+  
 
+</head>
+  
+<body>
+  <style>
+    #area{
+      background-color: #1e88e5;
+      width: 100%;
+      height: 300px;
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    }
+    body {
+      width: 100%;
+      height: 100vh;
+      background-color: #00796b;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
 
+    figure{
+      width:max-content;
+      height: auto;
+    }
+    figure img {
+      width: 600px;
+      height:max-content;
+    }
 
+    .flex {
+      display: flex;
+    }
+    .flex-centro{
+      justify-content: center;
+      align-items: center;
 
-    <style>
+    }
+    .flex-end{
+      justify-content: flex-end;
 
-      body{
-
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;/* 100vh significa que a altura inicial 
-        do corpo levará 100% da altura do viewport, enquanto o uso 
-        de altura mínima em vez de altura permitirá que o elemento 
-        do corpo cresça ainda mais se necessário. */
+    }
     
-}
-.tabela-precos{
-    background-color: #fff;
-    border-radius: 10px ;
-    padding: 15px 25px;
-    width: 100%;
-    max-width: 960px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 4;
-    border-radius: 5px;
-                          
-}
 
-.preco-plano {
-    border-bottom: 1px solid #e1f1ff;
-}
-.preco-plano:last-child{
-    border-bottom: none;
-}
- .preco-imagem {
-    margin-bottom: 25px;
-    max-width: 100%;
- }
-
- .preco-header {
-     color: #888;
-     font-weight: 600;
-     letter-spacing: 1px;
- }
- .preco-features{
-     margin: 50px 0 25px;
-     color: #016ff9;
- }
-
- .preco-features-item {
-     font-weight: 600;
-     letter-spacing: 1px;
-     font-size: 12px;
-     line-height: 1.5;
-     padding: 15px 0;
-     border-top: 1px solid #e1f1ff;
- }
- .preco-features-item:last-child{
-  border-bottom: 1px solid #e1f1ff;
- }
-
-.preco-valor {
-    color: #016ff9;
-    display: block;
-    font-size: 32px;
-    font-weight: 700;
-}
-.preco-botao{
-    border: 1px solid #9dd1ff;
-    border-radius: 10px;
-    color: #348efe;
-    display: inline-block;
-    padding: 15px 35px;
-    text-decoration: none;
-    margin: 25px 0;
-    transition: background-color 200ms ease-in-out;
-
-}
-
-.preco-botao:hover, .preco-botao:focus{
-    background-color: #e1f1ff;
-
-}
-
-.preco-botao.is-featured{
-    background-color: #48aaff;
-    color: white;
-}   
-.preco-botao.is-featured:focus, .preco-botao.is-featured:hover{
-    background-color: #269aff;
-    color: white;
-}
-
-
-@media(min-width: 900px){
-    .tabela-precos{
-        flex-direction: row;
-    }
-    .preco-plano{
-        border-bottom: none;
-        border-right: 1px solid #e1f1ff;
-        padding: 25px 50px;
-    }
-    .preco-plano:last-child{
-        border-right: none;
-    }
-}
-    </style>
-
-    <div class="tabela-precos">
-      <div class="preco-plano">
-        <img src="https://previews.dropbox.com/p/thumb/ABkdEa2R-nqqjY_Ul-Gble3ceinTNIdw73CSgy8IDQIH2cgm9DXG_3g6hLgkO-y7ucBL1htjkc3wRs5yMW4c4h4BjuA9kbsCdnwXMEkvtfxaDnICneOatEaTG3Pr7R1UI0giHU6DuhodxyjbmODFQknSfrQuUaRiU9y3cOwKP0WFZLu4Rsd8xhFMUqaHi0aOr8LzaHpQiL-wYFmSu4-kyp5pv0kUnxdp8LUQ0Zoc-of6J4zQ04FDSt40GAh8BknHsGfyVCst4DKlaWUnKfu8UMmXBTgaJr7EFeVen1Rdz1XTzmbvWEGj1HORnyp5mJXlCO_FWDor7TR5lra3tcZSMYz24QqO0pYxRgfIYD7I7MuF4UOLGYynUWK_Un0lthLlP0A/p.png" alt="" class="preco-imagem" />
-        <h2 class="preco-header">Personal</h2>
-        <ul class="preco-features">
-          <li class="preco-features-item">Custom domains</li>
-          <li class="preco-features-item">Sleeps after 30 min of inactivity</li>
-        </ul>
-        <span class="preco-valor">Free</span>
-        <a href="" class="preco-botao">Sign up</a>
-      </div>
-
-      <div class="preco-plano">
-        <img src="https://previews.dropbox.com/p/thumb/ABkblgliactSd21UPYwd3m06RsP3IQuvZaAv0g4WndtLVDRDQ8hhNaulf4cR1NzL4igmvoiB-3c6IV1lW8eU5x_DtyIezFDPevruu36xPEXASJBw8l1F__lnGSwBtVeF6vbNbZC5mTOhCRXf9NTiDiMGXg8PyORdHJCvSyy1UEJUOVMWf4bKY_PKmCTSLYYRgXv5GTmsYKidK5nUQKO5lQZe1XPBLGnRhTI-3bont7V2B-K_5LTXKDmWpnznKM5-XszY8OrJPThoT-ZiWziPZLk01lXSyXRktkBS7MJCKe9HbNTmj7Pz9SPv-nBauOV-zYUhMqWcar45dLDzVKUZ9Yc7v1prx91usPRR6HRIEw-_woSgWrd1bPzIZr2v75iufCw/p.png" alt="" class="preco-imagem" />
-        <h2 class="preco-header">Small team</h2>
-        <ul class="preco-features">
-          <li class="preco-features-item">Never sleeps</li>
-          <li class="preco-features-item">
-            Multiple workers for more powerful apps
-          </li>
-        </ul>
-        <span class="preco-valor">R$150</span>
-        <a href="" class="preco-botao is-featured">Free trial</a>
-      </div>
-
-      <div class="preco-plano">
-        <img src="https://previews.dropbox.com/p/thumb/ABkYSLRjrneN2g_yjFVOpzEGgRpe02arWQnirFJgScOhIvZHNGrQL4fjAfjn56tCk725y2T2iM7qns2RDiDJd1vQjig6yzpQjBzVcwv0PaWUqAsNJnVYmEglMgSD3xeQQtTCLpVWOAQfwL2d8Jv0UOzuFST_AH4B3o0chm1Wc1VB9mHEOuMR970mT1gMksPl-sHlbJJ2XuVeaskTsEQ5YT2gHb6Y4EUhGA_Nki97hXxloMw3RPGlkyLV3AqH9OT1fHxNWho26za5T7cVZR5bpFML19PK9QoX6E0YRFfacfPkM_YIYbgPsnjyhXEhHixppCFTr_hgFf0KrUaEJTwFxnx0PvUHWIcVE2mwYN4tCcc265tXupZwOi9rI9dma7C9TCg/p.png" alt="" class="preco-imagem" />
-        <h2 class="preco-header">Enterprise</h2>
-        <ul class="preco-features">
-          <li class="preco-features-item">Dedicated</li>
-          <li class="preco-features-item">Simple horizontal scalability</li>
-        </ul>
-        <span class="preco-valor">R$400</span>
-        <a href="" class="preco-botao">Free trial</a>
-      </div>
-    </div>
-  </div>
-
+/*   .triangulo{
+    width: auto;
+    height: auto;
+    background-image: url(https://demo.creativethemes.com/elementor/web-agency/wp-content/uploads/2021/07/decorative-shape.svg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 850px auto;
+    } */
+</style>
+  
+</body>
+</html>
