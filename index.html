@@ -1,11 +1,174 @@
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  
-<link rel="stylesheet" href="style.css">
+  <style>
+    body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* 100vh significa que a altura inicial 
+  do corpo levará 100% da altura do viewport, enquanto o uso 
+  de altura mínima em vez de altura permitirá que o elemento 
+  do corpo cresça ainda mais se necessário. */
+  box-sizing: border-box;
 
-<!--   <div class="tabela-precos">
+}
+ul {
+  padding: 0px;
+}
+
+
+.tabela-precos{
+  background: linear-gradient(#fab121, #ebe9e9, #fff9ed);
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0px 0px 195px 0px #EBE9E9;                 
+}
+
+ul li {
+  text-align:left ;
+}
+
+.preco-plano:last-child{
+  border-bottom: none;
+}
+.preco-imagem {
+  margin-bottom: 15px;
+  width: 120px;
+
+  
+
+}
+
+#img1{
+  padding: 6px;
+  width: 90px;
+  
+}
+#txt1 {
+  letter-spacing: 12px;
+}
+
+.preco-header {
+   color: #094184;
+   font-weight: 500;
+   letter-spacing: 5px;
+   font-family: "Font Awesome 5 Free";
+   font-size: 15px;
+   line-height: 1.6;
+   box-shadow: 1px 4px 6px 1px #fab121;
+ 
+
+}
+
+.preco-features{
+   margin: 50px 0 25px;
+   color: #016ff9;
+}
+
+.preco-features-item {
+   font-weight: 700;
+   font-size: 8px;
+   line-height: 1.5;
+   padding: 15px 0;
+   border-top: 1px solid #f3f3ff;
+   list-style: none;
+   font-family: "Font Awesome 5 Free";
+   color: #000;
+}
+.preco-features-item:first-child{
+border-top: none;
+}
+.preco-features-item:last-child{
+border-bottom: 1px solid #e1f1ff;
+}
+
+.fa-check-circle:before, .fa-circle-check:before {
+  color: green;
+}
+
+.fa-circle-xmark:before, .fa-times-circle:before, .fa-xmark-circle:before {
+color: red;
+}
+.preco-valor {
+  -webkit-text-stroke-width: 1px; /* largura da borda */
+  -webkit-text-stroke-color: black; /* cor da borda */
+  -webkit-text-fill-color: #fab121;
+  display: block;
+  font-size: 12px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.preco-valor i {
+  color: #000;
+}
+
+
+.preco-botao{
+  border: 1px solid #fab121;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 18px 35px;
+  text-decoration: none;
+  transition: background-color 200ms ease-in-out;
+  font-family: "Font Awesome 5 Free";
+  font-size: 8px;
+  box-shadow: 0px 0px 378px 0px #094184;
+  background-color: #094184;
+  color: #f6f6f6;
+  margin: 37px 0px 0px 0px;
+
+}
+#preco-features1{
+  font-size: 10px;
+  margin: 52px 0px 0px 0px;
+}
+.preco-botao#botao3 {
+  margin: 62px 0px 0px 0px;
+}
+
+.preco-botao:hover, .preco-botao:focus{
+  background-color: #f6f6f6;
+  color: #090c12;
+
+}
+
+.preco-botao.is-featured{
+  background-color: #094184;
+  color: white;
+  margin: 2px 0px 0px 0px;
+  box-shadow: 0px 0px 189px 0px #094184;
+}   
+.preco-botao.is-featured:focus, .preco-botao.is-featured:hover{
+  background-color: #f6f6f6;
+  color: #090c12;
+}
+
+
+@media(min-width: 900px){
+  .tabela-precos{
+      flex-direction: row;
+  }
+  .preco-plano{
+      border-bottom: none;
+      padding: 30px 29px;
+      border-right: 35px solid #f3f3ff;
+  }
+  .preco-plano:last-child{
+      border-right: none;
+  }
+}
+  </style>
+
+  <div class="tabela-precos">
     <div class="preco-plano">
       
       <img id="img1"
@@ -19,7 +182,11 @@
   
       <span class="preco-valor">Investimento até R$600&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
       <ul id="preco-features1" class="preco-features">
-        
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp; 3 Publicacao <strong>(semanal)</strong></li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp;4 Campanhas Facebook ADS ou Google Ads - Mensal</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp;1 Reunioes (Mensal)</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp;Relatorios Personalizados Data Studio - Mensal</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp; &nbsp;Campanhas ilimitadas Facebook ou Google Ads</li>
       </ul>
     
       <a id="botao3" href="" class="preco-botao">Inscrever-se</a>
@@ -38,9 +205,13 @@
       <br>
       <span class="preco-valor">Investimento até R$1000&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
       <ul class="preco-features">
-        
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;&nbsp;Campanhas ilimitadas Facebook Ads</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;&nbsp;Campanhas ilimitadas Google Ads</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;Relatorios Personalizados Data Studio</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp;&nbsp;Produção de Vídeos e Fotos</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp;&nbsp;Criacao de Site e Página de Vendas</li>
       </ul>
-
+    <br>
       <a href="" class="preco-botao is-featured">Inscrever-se</a>
     </div>
     <br>
@@ -58,63 +229,14 @@
       <br>
       <span class="preco-valor">Investimento até R$2000&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
       <ul class="preco-features">
-        
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;Planejamento de Marketing Estrategico</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;Consultoria Estrategica Quinzenal</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;Treinamento para Equipe de Vendas</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;Produção de Vídeos e Fotos</li>
+        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp;Criacao de Site e Página de Vendas</li>
       </ul>
      
       <a href="" class="preco-botao">Inscrever-se</a>
     </div>
-  </div> -->
+  </div>
 
-<div id="container-a">
-    <img id="img1"
-    sizes="(min-width: 400px) 80vw, 100vw"
-    srcset="https://startttcompany.tk/wp-content/uploads/2022/08/rocket.png 375w,
-            https://startttcompany.tk/wp-content/uploads/2022/08/httpsyoolo.appwp-contentuploads202008logo2.png-16.png 960w"
-            alt="ROCKET" class="preco-imagem">
-      <br>
-      <h2 id="txt1" class="preco-header">Pacote Rocket</h2>
-      <br>
-      <span class="preco-valor">Investimento até R$600&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
-      <br>
-      <br>
-      <ul id="preco-features1" class="preco-features">
-        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp; 3 Publicacao <strong>(semanal)</strong></li>
-        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp;4 Campanhas Facebook ADS ou Google Ads - Mensal</li>
-        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp;1 Reunioes (Mensal)</li>
-        <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp; &nbsp;Relatorios Personalizados Data Studio - Mensal</li>
-        <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp; &nbsp;Campanhas ilimitadas Facebook ou Google Ads</li>
-      </ul>
-      <br>
-      <a id="botao3" href="" class="preco-botao">Inscrever-se</a>
-</div>
-
-<div id="container-b" > </div>
-
-<div id="container-c" > </div>
-
-<style>
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* 100vh significa que a altura inicial 
-    do corpo levará 100% da altura do viewport, enquanto o uso 
-    de altura mínima em vez de altura permitirá que o elemento 
-    do corpo cresça ainda mais se necessário. */
-    box-sizing: border-box;
-    
-  
-  }
-div{
-    width: 200px;
-    height: 500px;
-    display:inline-block;
-    border: 1px solid #000;
-}
-
-img {
-    width: 80px;
-}
- 
-</style>
