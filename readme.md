@@ -3,6 +3,7 @@ https://victorhreinert.github.io/Tabelas-Precos-Projetos/
 
 # CSS Single Page Projeto.
 >Tabelas de Preços de trafégo da minha Agência Digital.
+>Usado flexbox para media query
 
 
 
