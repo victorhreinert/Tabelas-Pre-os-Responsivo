@@ -2,23 +2,20 @@
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<style>
+<style type="text/css">
     .content {
         /* centralizando os conteudos do container main e  o width controla o tamanho do container main */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 35% 35% 35%;
+        grid-template-rows: 650px;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
         box-sizing: border-box;
-        width: 800px;
     }
 
-    
     /* div principal */
     .tabela-precos,
     .tabela-precos2,
@@ -29,7 +26,7 @@
         text-align: center;
         text-transform: uppercase;
         border-radius: 24px;
-        background: linear-gradient(#fab121, #ebe9e9, #fff9ed);
+        /*       background: linear-gradient(#fab121, #ebe9e9, #fff9ed); */
         box-shadow: 0px 0px 195px 0px #ebe9e9;
     }
 
@@ -58,23 +55,35 @@
 
     /* primeira imagem do div */
     #img1 {
-        width: 47%;
+        width: 45%;
     }
 
     /* titulo dos pacotes*/
     h2.preco-header {
         color: #094184;
         font-weight: 600;
-        letter-spacing: 5px;
+        letter-spacing: 10px;
         font-family: "Font Awesome 5 Free";
-        font-size: 15px;
-        letter-spacing: 8px;
+        font-size: 18px;
         line-height: 1.6;
         /* sombra do container h2 dos pacotes */
-        box-shadow: 1px 4px 6px 1px #fab121
+        box-shadow: 1px 4px 6px 1px #fab121;
     }
 
     /* id do primeiro h2 do preco-header */
+    #txt1 {
+        letter-spacing: 12px;
+        margin: 10px 0px 5px 0px;
+        padding: 0px 0px 0px 0px;
+    }
+
+    #icone1 {
+        margin: 10px 0px 0px 0px;
+    }
+
+    #txt3 {
+        letter-spacing: 8px;
+    }
 
 
     /* texto 'investimento' dos pacotes embaixo do nome */
@@ -161,124 +170,170 @@
     }
 
     /* media queries */
-    @media(max-width: 900px) {
+    @media (max-width:900px) {
 
+        /* tablet, landscape iPad, lo-res laptops ands desktops */
+        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
         /* muda flexbox para coluna */
-        main {
-            flex-direction: column;
-
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: auto;
+            margin: 5px;
+            padding: 15px;
         }
+
+        /* tamanho das imagens */
+        img {
+            width: 40%;
+        }
+
+        #img1 {
+            width: 35%;
+        }
+
+
+        /* ajustar tamanhos da coluna */
+        .tabela-precos,
+        .tabela-precos2,
+        .tabela-precos3 {
+            margin: 20px 6px;
+            border: 2px solid #ebe9e9;
+        }
+
+        span.preco-valor {
+            font-size: 12px;
+        }
+
+        /* aumentar as fontes */
+
+        .preco-features-item {
+            font-size: 10px;
+            margin: 19px 0px 0px;
+            line-height: 1.5;
+            padding: 10px 0px;
+        }
+
+        .preco-features-item:last-child {
+            border-bottom: 1px solid #f3f3ff;
+        }
+
+        /* centralizar os textos da lita */
 
         ul li {
             text-align: center;
         }
 
+        .preco-botao {
+
+            margin: 10px 0px 0px 0px;
+            font-size: 11px;
+
+        }
     }
 
-    .preco-plano {
-        /*     border-bottom: none;
-            padding: 30px 29px;
-            border-right: 35px solid #f3f3ff; */
-    }
+    @media (max-width: 1280px) {
+        .preco-botao {
+            font-size: 11px;
 
-    .preco-plano:last-child {
-        /*  border-right: none; */
-    }
+        }
     }
 </style>
-
-<body>
-    <main class="content">
-        <div class="tabela-precos">
-            <div class="preco-plano">
-                <img id="img1" sizes="(min-width: 400px) 80vw, 100vw"
-                    srcset="https://startttcompany.tk/wp-content/uploads/2022/08/rocket.png 375w,
+<main class="content">
+    <div class="tabela-precos">
+        <div class="preco-plano">
+            <img id="img1" sizes="(min-width: 400px) 80vw, 100vw"
+                srcset="https://startttcompany.tk/wp-content/uploads/2022/08/rocket.png 375w,
                     https://startttcompany.tk/wp-content/uploads/2022/08/httpsyoolo.appwp-contentuploads202008logo2.png-16.png 960w" alt="ROCKET" class="preco-imagem">
-                <h2 id="txt1" class="preco-header">Pacote Rocket</h2>
-                <br>
-                <span class="preco-valor">Investimento até R$600&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
-                <ul class="preco-features">
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 3 Publicacao
-                        <strong>(semanal)</strong>
-                    </li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 4 Campanhas Fb
-                        ADS
-                        ou Google Ads - Mensal</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 1 Reunioes
-                        (Mensal)
-                    </li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Relatorios
-                        Personalizados Data - Mensal</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Campanhas
-                        ilimitadas Facebook ou Google Ads - Mensal
-                    </li>
+            <br>
+            <h2 id="txt1" class="preco-header">Pacote Rocket</h2>
+            <br>
 
-                </ul>
-                <a href="#" class="preco-botao">Inscreva-se</a>
-            </div>
+            <span id="icone1" class="preco-valor">Investimento até R$600&nbsp;&nbsp; <i
+                    class="fa-solid fa-wallet"></i></span>
+            <ul class="preco-features">
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 3 Publicacao
+                    <strong>(semanal)</strong>
+                </li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 4 Campanhas Fb
+                    ADS
+                    ou Google Ads - Mensal</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 1 Reunioes
+                    (Mensal)
+                </li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Relatorios
+                    Personalizados Data - Mensal</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Campanhas
+                    ilimitadas Facebook ou Google Ads - Mensal
+                </li>
+
+            </ul>
+            <a href="#" class="preco-botao">Inscreva-se</a>
         </div>
-        <div class="tabela-precos2">
-            <div class="preco-plano">
-                <img id="img2" sizes="(min-width: 400px) 80vw, 100vw" srcset="https://startttcompany.tk/wp-content/uploads/2022/08/infinity-small.png 375w,
+    </div>
+    <div class="tabela-precos2">
+        <div class="preco-plano">
+            <img id="img2" sizes="(min-width: 400px) 80vw, 100vw" srcset="https://startttcompany.tk/wp-content/uploads/2022/08/infinity-small.png 375w,
             https://startttcompany.tk/wp-content/uploads/2022/08/infinity-medium.png 960w" alt="INFINITY"
-                    class="preco-imagem">
-                <h2 class="preco-header">Pacote Infinity</h2>
-                <br>
-                <span class="preco-valor">Investimento até R$1000&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
-                <ul class="preco-features">
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Campanhas
-                        ilimitadas Facebook
-                        Ads</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Campanhas
-                        ilimitadas Google Ads
-                    </li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Relatorios
-                        Personalizados Data
-                        Studio</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Produção de
-                        Vídeos
-                        e Fotos</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Criacao de Site
-                        e
-                        Página de
-                        Vendas</li>
-                </ul>
-                <a href="#" class="preco-botao is-featured">Inscreva-se</a>
+                class="preco-imagem">
+            <h2 class="preco-header">Pacote Infinity</h2>
+            <br>
+            <span class="preco-valor">Investimento até R$1000&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
+            <ul class="preco-features">
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Campanhas
+                    ilimitadas Facebook
+                    Ads</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Campanhas
+                    ilimitadas Google Ads
+                </li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Relatorios
+                    Personalizados Data
+                    Studio</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Produção de
+                    Vídeos
+                    e Fotos</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Criacao de Site
+                    e
+                    Página de
+                    Vendas</li>
+            </ul>
+            <a href="#" class="preco-botao is-featured">Inscreva-se</a>
 
-            </div>
         </div>
+    </div>
 
-        <div class="tabela-precos3">
-            <div class="preco-plano">
-                <img id="img3" sizes="(min-width: 400px) 80vw, 100vw" srcset="https://startttcompany.tk/wp-content/uploads/2022/08/start-wars-small.png 375w,
+    <div class="tabela-precos3">
+        <div class="preco-plano">
+            <img id="img3" sizes="(min-width: 400px) 80vw, 100vw" srcset="https://startttcompany.tk/wp-content/uploads/2022/08/start-wars-small.png 375w,
             https://startttcompany.tk/wp-content/uploads/2022/08/start-wars-medium.png 960w" alt="INFINITY"
-                    class="preco-imagem">
-                <h2 class="preco-header">Pacote Star Wars</h2>
-                <br>
-                <span class="preco-valor">Investimento até R$2000&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
-                <ul class="preco-features">
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CPlanejamento
-                        de
-                        Marketing
-                        Estrategico</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CConsultoria
-                        Estrategica
-                        Quinzenal</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CTreinamento
-                        para
-                        Equipe de
-                        Vendas</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CProdução de
-                        Vídeos
-                        e Fotos</li>
-                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Criacao de Site
-                        e
-                        Páginagide
-                        Vendas</li>
-                </ul>
-                <a href="#" class="preco-botao is-featured">Inscreva-se</a>
-            </div>
-
+                class="preco-imagem">
+            <h2 id="txt3" class="preco-header">Pacote Star Wars</h2>
+            <br>
+            <span class="preco-valor">Investimento até R$2000&nbsp;&nbsp; <i class="fa-solid fa-wallet"></i></span>
+            <ul class="preco-features">
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CPlanejamento
+                    de
+                    Marketing
+                    Estrategico</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CConsultoria
+                    Estrategica
+                    Quinzenal</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CTreinamento
+                    para
+                    Equipe de
+                    Vendas</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; CProdução de
+                    Vídeos
+                    e Fotos</li>
+                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Criacao de Site
+                    e
+                    Página de
+                    Vendas</li>
+            </ul>
+            <a href="#" class="preco-botao is-featured">Inscreva-se</a>
         </div>
-    </main>
-</body>
+
+    </div>
+</main>
