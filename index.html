@@ -2,314 +2,43 @@
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<style type="text/css">
-    .content {
-        /* centralizando os conteudos do container main e  o width controla o tamanho do container main */
-        width: 80%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 35% 35% 35%;
-        grid-template-rows: 650px;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        box-sizing: border-box;
-    }
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="app.css">
 
-    /* div principal */
-    .tabela-precos,
-    .tabela-precos2,
-    .tabela-precos3 {
-        border-radius: 10px;
-        margin: 0px 6px;
-        flex-direction: column;
-        text-align: center;
-        text-transform: uppercase;
-        border-radius: 24px;
-        /*       background: linear-gradient(#fab121, #ebe9e9, #fff9ed); */
-        box-shadow: 0px 0px 195px 0px #ebe9e9;
-    }
-
-    /* clase das divs */
-    .preco-plano {
-        padding: 8px 29px;
-
-    }
-
-    /* #plano-preco img {
-    box-shadow: -11px 13px 18px 0px #000087;
-    border-radius: 10px;
-    width: 90p;
-}
-
-   */
-    /* imagem das div */
-    img {
-        width: 80px;
-        /* centralizar imagem */
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-
-    /* primeira imagem do div */
-    #img1 {
-        width: 45%;
-    }
-
-    /* titulo dos pacotes*/
-    h2.preco-header {
-        color: #094184;
-        font-weight: 600;
-        letter-spacing: 10px;
-        font-family: "Font Awesome 5 Free";
-        font-size: 18px;
-        line-height: 1.6;
-        /* sombra do container h2 dos pacotes */
-        box-shadow: 1px 4px 6px 1px #fab121;
-    }
-
-    /* id do primeiro h2 do preco-header */
-    #txt1 {
-        letter-spacing: 12px;
-        margin: 10px 0px 5px 0px;
-        padding: 0px 0px 0px 0px;
-    }
-
-    #icone1 {
-        margin: 10px 0px 0px 0px;
-    }
-
-    #txt3 {
-        letter-spacing: 8px;
-    }
-
-
-    /* texto 'investimento' dos pacotes embaixo do nome */
-    span.preco-valor {
-        margin: 0px 0px 0px 0px;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black;
-        -webkit-text-fill-color: #fab121;
-        display: block;
-        font-size: 12px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-align: center;
-
-    }
-
-
-    /* lista ordenada das divs */
-    ul li {
-        text-align: start;
-    }
-
-    /* elemento principal da lista ordenada ul */
-    ul.preco-features {
-        /*  */
-        padding: 0px 0px 0px 0px;
-        margin: 10px 0px 10px 0px;
-    }
-
-    /* classe das frases dos planos */
-
-    .preco-features-item {
-        font-weight: 700;
-        font-size: 10px;
-        line-height: 1.5;
-        padding: 15px 0;
-        border-top: 1px solid #f3f3ff;
-        list-style: none;
-        /* tirar marcação da lista */
-        font-family: "Font Awesome 5 Free";
-        color: #000;
-        margin: 20px 0px 0px;
-    }
-
-    /* primeira frase da lista sem borda */
-    .preco-features-item:first-child {
-        border-top: none;
-    }
-
-
-    /* cores dos icones dentro da lista */
-    .fa-check-circle:before,
-    .fa-circle-check:before {
-        color: green;
-    }
-
-    .fa-circle-xmark:before,
-    .fa-times-circle:before,
-    .fa-xmark-circle:before {
-        color: red;
-    }
-
-    .whatsapp-link {
-        border: 1px solid #fab121;
-        display: inline-block;
-        padding: 9px 22px;
-        text-decoration: none;
-        transition: background-color 200ms ease-in-out;
-        font-family: "Font Awesome 5 Free";
-        box-shadow: 0px 0px 378px 0px #094184;
-        background-color: #094184;
-        color: #fff;
-        border-radius: 10px;
-        font-size: 16px;
-        width: 35%;
-    }
-
-    .whatsapp-link:hover {
-        background-color: #25d366;
-    }
-
-    .fa-whatsapp {
-        text-align: start;
-        margin: 0px 10px 0px 5px;
-    }
-
-    .fa-whatsapp i {
-        font-size: 40px;
-    }
-
-
-    /* botaõ inscreva-se */
-    /*     .preco-botao {
-        border: 1px solid #fab121;
-        border-radius: 10px;
-        display: inline-block;
-        padding: 18px 35px;
-        text-decoration: none;
-        transition: background-color 200ms ease-in-out;
-        font-family: "Font Awesome 5 Free";
-        font-size: 12px;
-        box-shadow: 0px 0px 378px 0px #094184; */
-    /* sombra do botao que faz um sombreamento atrás */
-    /*    background-color: #094184;
-        color: #f6f6f6; }*/
-
-
-    /* hover botão */
-    /*     .preco-botao:hover,
-    .preco-botao:focus {
-        background-color: #f6f6f6;
-        color: #090c12;
-
-    } */
-
-    /* media queries */
-    @media (max-width:900px) {
-
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
-        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-        /* muda flexbox para coluna */
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            width: auto;
-            margin: 5px;
-            padding: 15px;
-        }
-
-        /* tamanho das imagens */
-        img {
-            width: 40%;
-        }
-
-        #img1 {
-            width: 35%;
-        }
-
-
-        /* ajustar tamanhos da coluna */
-        .tabela-precos,
-        .tabela-precos2,
-        .tabela-precos3 {
-            margin: 20px 6px;
-            border: 2px solid #ebe9e9;
-        }
-
-        span.preco-valor {
-            font-size: 12px;
-        }
-
-        /* aumentar as fontes */
-
-        .preco-features-item {
-            font-size: 10px;
-            margin: 19px 0px 0px;
-            line-height: 1.5;
-            padding: 10px 0px;
-        }
-
-        .preco-features-item:last-child {
-            border-bottom: 1px solid #f3f3ff;
-        }
-
-        /* centralizar os textos da lita */
-
-        ul li {
-            text-align: center;
-        }
-
-        /*         .preco-botao {
-
-            margin: 10px 0px 0px 0px;
-            font-size: 11px;
-        } */
-        /* botao whatsapp */
-
-    }
-
-    @media (max-width: 1280px) {
-        .preco-botao {
-            font-size: 11px;
-        }
-
-    }
 </style>
 <main class="content">
     <div class="tabela-precos">
         <div class="preco-plano">
-            <img id="img1" sizes="(min-width: 400px) 80vw, 100vw"
-                srcset="https://startttcompany.tk/wp-content/uploads/2022/08/rocket.png 375w,
-                    https://startttcompany.tk/wp-content/uploads/2022/08/httpsyoolo.appwp-contentuploads202008logo2.png-16.png 960w" alt="ROCKET" class="preco-imagem">
+            <img id="img1" sizes="(min-width: 400px) 80vw, 100vw" src="icons/rocket-solid.svg"  alt="ROCKET"
+                class="preco-imagem">
+            <h2 class="preco-header">Pacote Rocket</h2>
             <br>
-            <h2 id="txt1" class="preco-header">Pacote Rocket</h2>
-            <br>
-
             <span id="icone1" class="preco-valor">Investimento até R$600&nbsp;&nbsp; <i
-                    class="fa-solid fa-wallet"></i></span>
-            <ul class="preco-features">
-                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 3 Publicacao
-                    <strong>(semanal)</strong>
-                </li>
-                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 4 Campanhas Fb
-                    ADS
-                    ou Google Ads - Mensal</li>
-                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 1 Reunioes
-                    (Mensal)
-                </li>
-                <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Relatorios
-                    Personalizados Data - Mensal</li>
-                <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Campanhas
-                    ilimitadas Facebook ou Google Ads - Mensal
-                </li>
+                class="fa-solid fa-wallet"></i></span>
+                <ul class="preco-features">
+                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 3 Publicacao
+                        <strong>(semanal)</strong>
+                    </li>
+                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 4 Campanhas Fb
+                        ADS
+                        ou Google Ads - Mensal</li>
+                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; 1 Reunioes
+                        (Mensal)
+                    </li>
+                    <li class="preco-features-item"><i class="fa-solid fa-circle-check"></i>&nbsp;&nbsp; Relatorios
+                        Personalizados Data - Mensal</li>
+                    <li class="preco-features-item"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp; Campanhas
+                        ilimitadas Facebook ou Google Ads - Mensal
+                    </li>
+    
+                </ul> <br><a
+        href="" id="whats1" class="whatsapp-link"><i class="fa fa-whatsapp"></i>Acesse</a>
 
-            </ul><a
-                href="https://api.whatsapp.com/send?phone=5547991721319&text=Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Rocket"
-                target="_blank" rel="noopener noreferrer" class="whatsapp-link"><i class="fa fa-whatsapp"></i>Acesse</a>
-            <!--             <a href="https://api.whatsapp.com/send?phone=5547991721319&text=Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Rocket"
-                class="preco-botao" target="_blank" rel="noopener noreferrer">Inscreva-se</a> -->
         </div>
     </div>
     <div class="tabela-precos2">
         <div class="preco-plano">
-            <img id="img2" sizes="(min-width: 400px) 80vw, 100vw" srcset="https://startttcompany.tk/wp-content/uploads/2022/08/infinity-small.png 375w,
-            https://startttcompany.tk/wp-content/uploads/2022/08/infinity-medium.png 960w" alt="INFINITY"
+            <img id="img2" sizes="(min-width: 400px) 80vw, 100vw" src="icons/infinity-solid.svg" alt="INFINITY"
                 class="preco-imagem">
             <h2 class="preco-header">Pacote Infinity</h2>
             <br>
@@ -332,18 +61,15 @@
                     Página de
                     Vendas</li>
             </ul><a
-                href="https://api.whatsapp.com/send?phone=5547991721319&text=Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Infinity"
-                target="_blank" rel="noopener noreferrer" class="whatsapp-link"><i class="fa fa-whatsapp"></i>Acesse</a>
-            <!--             <a href="https://api.whatsapp.com/send?phone=5547991721319&text=Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Infinity"
-                target="_blank" rel="noopener noreferrer" class="preco-botao is-featured">Inscreva-se</a> -->
+                href="" id="whats2" class="whatsapp-link"><i class="fa fa-whatsapp"></i>Acesse</a>
+     
 
         </div>
     </div>
 
     <div class="tabela-precos3">
         <div class="preco-plano">
-            <img id="img3" sizes="(min-width: 400px) 80vw, 100vw" srcset="https://startttcompany.tk/wp-content/uploads/2022/08/start-wars-small.png 375w,
-            https://startttcompany.tk/wp-content/uploads/2022/08/start-wars-medium.png 960w" alt="INFINITY"
+            <img id="img3" sizes="(min-width: 400px) 80vw, 100vw" src="icons/jedi-solid.svg" alt="INFINITY"
                 class="preco-imagem">
             <h2 id="txt3" class="preco-header">Pacote Star Wars</h2>
             <br>
@@ -368,10 +94,8 @@
                     Página de
                     Vendas</li>
             </ul>
-            <!--             <a href="https://api.whatsapp.com/send?phone=5547991721319&text=Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Star%20Wars"
-                target="_blank" rel="noopener noreferrer" class="preco-botao is-featured">Inscreva-se</a> -->
-            <a href="https://api.whatsapp.com/send?phone=5547991721319&text=Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Star%20Wars"
-                target="_blank" rel="noopener noreferrer" id="whats" class="whatsapp-link"><i
+   
+            <a href=""id="whats3" class="whatsapp-link"><i
                     class="fa fa-whatsapp"></i>Acesse</a>
         </div>
 

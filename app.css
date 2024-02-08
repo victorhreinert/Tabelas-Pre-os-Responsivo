@@ -1,102 +1,261 @@
-body{
-    background-color: #60a9ff;
+.content {
+    /* centralizando os conteudos do container main e  o width controla o tamanho do container main */
+    width: auto; /* Alteração: Removido o valor fixo de 80% */
+    margin: 5px; /* Alteração: Margin reduzida para 5px */
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;/* 100vh significa que a altura inicial 
-    do corpo levará 100% da altura do viewport, enquanto o uso 
-    de altura mínima em vez de altura permitirá que o elemento 
-    do corpo cresça ainda mais se necessário. */
-
+    min-height: 100vh;
+    box-sizing: border-box;
 }
-.tabela-precos{
-    background-color: white;
-    border-radius: 10px ;
-    padding: 15px 25px;
-    width: 100%;
-    max-width: 960px;
-    display: flex;
-    flex-direction: column;
+
+/* div principal */
+.tabela-precos,
+.tabela-precos2,
+.tabela-precos3 {
+    
+    border-radius: 10px;
+    margin: 20px 6px; /* Alteração: Aumentada a margem superior e inferior para 20px */
+    border: 2px solid #ebe9e9;
+    justify-content: center; /* Adição: Centralizar os elementos horizontalmente */
+    align-items: center; /* Adição: Centralizar os elementos verticalmente */
+    flex-direction: column; /* Adição: Ajustar a direção do flex para uma coluna */
     text-align: center;
     text-transform: uppercase;
+    height: 700px; 
+
 }
 
+/* clase das divs */
 .preco-plano {
-    border-bottom: 1px solid #e1f1ff;
+    padding: 8px 29px;
+
 }
-.preco-plano:last-child{
-    border-bottom: none;
+
+/* #plano-preco img {
+box-shadow: -11px 13px 18px 0px #000087;
+border-radius: 10px;
+width: 90p;
 }
- .preco-imagem {
-    margin-bottom: 25px;
-    max-width: 100%;
- }
 
- .preco-header {
-     color: #888;
-     font-weight: 600;
-     letter-spacing: 1px;
- }
- .preco-features{
-     margin: 50px 0 25px;
-     color: #016ff9;
- }
-
- .preco-features-item {
-     font-weight: 600;
-     letter-spacing: 1px;
-     font-size: 12px;
-     line-height: 1.5;
-     padding: 15px 0;
-     border-top: 1px solid #e1f1ff;
- }
- .preco-features-item:last-child{
-  border-bottom: 1px solid #e1f1ff;
- }
-
-.preco-valor {
-    color: #016ff9;
+*/
+/* imagem das div */
+img {
+    width: 100px;
+    /* centralizar imagem */
     display: block;
-    font-size: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; Removido: Esta linha estava duplicada e substituía a largura definida anteriormente */
+    padding-bottom: 40px;
+}
+#img1{
+    padding-bottom: 10px;
+}
+
+/* titulo dos pacotes*/
+h2.preco-header {
+    color: #094184;
+    font-weight: 600;
+    letter-spacing: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px;
+    line-height: 1.6;
+    /* sombra do container h2 dos pacotes */
+    box-shadow: 1px 4px 6px 1px #fab121;
+}
+
+/* id do primeiro h2 do preco-header */
+#txt1 {
+    letter-spacing: 12px;
+    margin: 10px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+#icone1 {
+    margin: 10px 0px 0px 0px;
+}
+
+#txt3 {
+    letter-spacing: 8px;
+}
+
+
+/* texto 'investimento' dos pacotes embaixo do nome */
+span.preco-valor {
+    margin: 0px 0px 0px 0px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color: #fab121;
+    display: block;
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+
+}
+
+
+/* lista ordenada das divs */
+ul li {
+    text-align: start;
+}
+
+/* elemento principal da lista ordenada ul */
+ul.preco-features {
+    /*  */
+    padding: 0px 0px 0px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+/* classe das frases dos planos */
+
+.preco-features-item {
     font-weight: 700;
+    font-size: 10px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #f3f3ff;
+    list-style: none;
+    /* tirar marcação da lista */
+    font-family: "Font Awesome 5 Free";
+    color: #000;
+    margin: 20px 0px 0px;
 }
-.preco-botao{
-    border: 1px solid #9dd1ff;
-    border-radius: 10px;
-    color: #348efe;
+
+/* primeira frase da lista sem borda */
+.preco-features-item:first-child {
+    border-top: none;
+}
+
+
+/* cores dos icones dentro da lista */
+.fa-check-circle:before,
+.fa-circle-check:before {
+    color: green;
+}
+
+.fa-circle-xmark:before,
+.fa-times-circle:before,
+.fa-xmark-circle:before {
+    color: red;
+}
+
+.whatsapp-link {
+    border: 1px solid #fab121;
     display: inline-block;
-    padding: 15px 35px;
+    padding: 10px 32px;
     text-decoration: none;
-    margin: 25px 0;
     transition: background-color 200ms ease-in-out;
-
+    font-family: "Font Awesome 5 Free";
+    box-shadow: 0px 0px 378px 0px #094184;
+    background-color: #094184;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    width: 35%;
 }
 
-.preco-botao:hover, .preco-botao:focus{
-    background-color: #e1f1ff;
-
+.whatsapp-link:hover {
+    background-color: #25d366;
 }
 
-.preco-botao.is-featured{
-    background-color: #48aaff;
-    color: white;
-}   
-.preco-botao.is-featured:focus, .preco-botao.is-featured:hover{
-    background-color: #269aff;
-    color: white;
+.fa-whatsapp {
+    text-align: start;
+    margin: 0px 10px 0px 5px;
+}
+
+.fa-whatsapp i {
+    font-size: 40px;
+}
+
+/* botaõ inscreva-se */
+.preco-botao {
+    border: 1px solid #fab121;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 18px 35px;
+    text-decoration: none;
+    transition: background-color 200ms ease-in-out;
+    font-family: "Font Awesome 5 Free";
+    font-size: 12px;
+    box-shadow: 0px 0px 378px 0px #094184;
+    background-color: #094184;
+    color: #f6f6f6;
+}
+
+/* hover botão */
+.preco-botao:hover,
+.preco-botao:focus {
+    background-color: #f6f6f6;
+    color: #090c12;
 }
 
 
-@media(min-width: 900px){
-    .tabela-precos{
-        flex-direction: row;
+
+#whats1{
+ margin-top: 35px;
+}
+#whats2{
+    margin-top: 40px;
+}
+#whats3{
+    margin-top: 30px;
+}
+
+/* media queries */
+/* media queries */
+@media (max-width: 900px) {
+    /* tablet, landscape iPad, lo-res laptops and desktops */
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    /* muda flexbox para coluna */
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: auto;
+        margin: 5px;
+        padding-bottom: 40px;
     }
-    .preco-plano{
-        border-bottom: none;
-        border-right: 1px solid #e1f1ff;
-        padding: 25px 50px;
+
+
+    /* ajustar tamanhos da coluna */
+    .tabela-precos,
+    .tabela-precos2,
+    .tabela-precos3 {
+        margin: 20px 6px;
+        border: 2px solid #ebe9e9;
+        /* Define a largura das tabelas para ocupar 100% da largura da tela quando estiverem em uma única coluna */
+        width: 100%;
+        padding-bottom: 10px;
+        height: 600px; 
     }
-    .preco-plano:last-child{
-        border-right: none;
+
+    span.preco-valor {
+        font-size: 12px;
+    }
+
+    /* aumentar as fontes */
+    .preco-features-item {
+        font-size: 10px;
+        margin: 19px 0px 0px;
+        line-height: 1.5;
+        padding: 10px 0px;
+    }
+
+    .preco-features-item:last-child {
+        border-bottom: 1px solid #f3f3ff;
+    }
+
+    /* centralizar os textos da lista */
+    ul li {
+        text-align: center;
+    }
+
+    /* botao whatsapp */
+    .whatsapp-link {
+        margin: 10px 0px 0px 0px;
+        font-size: 11px;
     }
 }
