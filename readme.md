@@ -10,4 +10,4 @@ https://victorhreinert.github.io/Tabelas-Precos-Projetos/
 
 ## Links
 >
-- __[dinamic-web pages link](https://victorhreinert.github.io/Tabelas-Precos-Projetos/)__ -Acesse Aqui
+- __[Acesse Aqui](https://victorhreinert.github.io/Tabelas-Precos-Projetos/)__ - Prévia.
